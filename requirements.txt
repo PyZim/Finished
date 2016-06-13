@@ -1,0 +1,5 @@
+django==1.7
+wafer
+psycopg2
+mdx_outline
+mdx_attr_cols
