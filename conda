@@ -1,0 +1,6 @@
+#!/home/hamub/bin/anaconda3/bin/python3
+if __name__ == '__main__':
+    import sys
+    from conda.cli.main import main
+
+    sys.exit(main())
