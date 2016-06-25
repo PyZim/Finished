@@ -8,7 +8,7 @@ DEBUG = "False"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pycon',
-        }
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': 'db.sqlite3',
+         }
 }
