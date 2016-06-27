@@ -13,6 +13,7 @@ from django.core.urlresolvers import reverse_lazy
 
 pyconzadir = os.path.dirname(__file__)
 
+
 ALLOWED_HOSTS = "localhost"
 DEBUG = "False"
 STATICFILES_DIRS = (
@@ -20,6 +21,7 @@ STATICFILES_DIRS = (
     os.path.join(pyconzadir, 'bower_components'),
 )
 
+STATIC_ROOT = os.path.join(pyconzadir, 'statics')
 TEMPLATE_DIRS = (
     os.path.join(pyconzadir, 'templates'),
 ) + TEMPLATE_DIRS
@@ -27,9 +29,9 @@ TEMPLATE_DIRS = (
 
 WAFER_MENUS += (
     {"menu": "about", "label": _("About"),
-     "items": ["who are we?"]},
-    {"name": "venue", "label": _("Venue"),
-     "url": reverse_lazy("wafer_page", args=("venue",))},
+     "items": [{"name": "about_us", "label":_("What is Pycon Zim"), "url": "/about-pyconzim"}]},
+    {"name": "venue", "label": _("Venue")},
+    # "url": reverse_lazy("about-pyconzim")},
     {"menu": "sponsors", "label": _("Sponsors"),
      "items": [
          # {"name": "???", "label": _(u"» ??? ★"),
@@ -41,14 +43,14 @@ WAFER_MENUS += (
          ]},
     {"menu": "talks", "label": _("Talks"),
      "items": [
-         #{"name": "schedule", "label": _("Schedule"),
-         # "url": reverse_lazy("wafer_full_schedule")},
+         {"name": "submit-a-talk", "label": _("Schedule"),
+          "url": reverse_lazy("wafer_full_schedule")},
          #{"name": "schedule-next-up", "label": _("Next up"),
           # Fixed day
           # "url": "/schedule/current/?day=2016-10-01&time=08:30"},
          # "url": reverse_lazy("wafer_current")},
-         {"name": "accepted-talks", "label": _("Accepted Talks"),
-          "url": reverse_lazy("wafer_users_talks")},
+          {"name": "accepted-talks", "label": _("Accepted Talks"),
+           "url": reverse_lazy("wafer_users_talks")},
         ]},
     #{"menu": "events", "label": _("News"),
     # "items": []},

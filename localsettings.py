@@ -11,7 +11,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pycon',
         'USER': 'hamu',
-        'PASSWORD': 'popo/?',
+        'PASSWORD': 'Louis2353/?',
         'OPTIONS': {
             'autocommit': True,
          },
