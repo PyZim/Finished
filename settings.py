@@ -29,9 +29,13 @@ TEMPLATE_DIRS = (
 
 WAFER_MENUS += (
     {"menu": "about", "label": _("About"),
-     "items": [{"name": "about_us", "label":_("What is Pycon Zim"), "url": "/about-pyconzim"}]},
-    {"name": "venue", "label": _("Venue")},
-    # "url": reverse_lazy("about-pyconzim")},
+        "items": [{"name": "about_pyconzim", "label": _("About PyConZim"),
+            "url": "/about-pyconzim"},
+            {"name": "django_girls_harare", "label": _("About Django Girls Harare"),
+            "url": "/django-girls-harare"
+            }]},
+    {"name": "venue", "label": _("Venue"),
+     "url": reverse_lazy("wafer_page", args=("venue",))},
     {"menu": "sponsors", "label": _("Sponsors"),
      "items": [
          # {"name": "???", "label": _(u"» ??? ★"),
@@ -42,18 +46,18 @@ WAFER_MENUS += (
           "url": reverse_lazy("wafer_sponsorship_packages")},
          ]},
     {"menu": "talks", "label": _("Talks"),
-     "items": [
-         {"name": "submit-a-talk", "label": _("Schedule"),
-          "url": reverse_lazy("wafer_full_schedule")},
+      "items": [
+         {"name": "submit-a-talk", "label": _("Submit A Talk"),
+          "url": "/submit-a-talk"},
          #{"name": "schedule-next-up", "label": _("Next up"),
-          # Fixed day
-          # "url": "/schedule/current/?day=2016-10-01&time=08:30"},
-         # "url": reverse_lazy("wafer_current")},
+           #Fixed day
+           #"url": "/schedule/current/?day=2016-10-01&time=08:30"},
+          #"url": reverse_lazy("wafer_current")},
           {"name": "accepted-talks", "label": _("Accepted Talks"),
            "url": reverse_lazy("wafer_users_talks")},
         ]},
-    #{"menu": "events", "label": _("News"),
-    # "items": []},
+    {"menu": "events", "label": _("News"),
+     "items": []},
    # {"menu": "previous-pycons", "label": _("Past PyConZAs"),
    #  "items": [
    #      {"name": "pyconza2012", "label": _("PyConZA 2012"),
@@ -67,13 +71,13 @@ WAFER_MENUS += (
    #      ]},
     {"name": "twitter", "label": "Twitter",
      "image": "/static/img/twitter.png",
-     "url": "https://twitter.com/pyconza"},
+     "url": "https://twitter.com"},
     {"name": "googleplus", "label": "Google+",
      "image": "/static/img/googleplus.png",
-     "url": "https://plus.google.com/events/ccqgtdbrk712n64ruc66s4tpsms"},
+     "url": "https://groups.google.com/forum/#!forum/zimpy"},
     {"name": "facebook", "label": "Facebook",
      "image": "/static/img/facebook.png",
-     "url": "https://www.facebook.com/pyconza"},
+     "url": "https://www.facebook.com/"},
 )
 
 

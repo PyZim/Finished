@@ -1,7 +1,10 @@
 import os
 from wafer.settings import *
 
-ALLOWED_HOSTS = "localhost"
+from django.utils.translation import ugettext_lazy as _
+from django.core.urlresolvers import reverse_lazy
+
+ALLOWED_HOSTS = "dzidzo.pythonanywhere.com"
 SECRET_KEY = 'dfdjkhfdjshfj7676dfhgsdj'
 DEBUG = "False"
 
@@ -15,7 +18,7 @@ DATABASES = {
         'OPTIONS': {
             'autocommit': True,
          },
-         'HOST': 'localhost',
+         'HOST': 'dzidzo.mysql.pythonanywhere-services.com',
          'PORT': '',
     }
 }
