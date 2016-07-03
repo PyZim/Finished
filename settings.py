@@ -15,7 +15,7 @@ pyconzadir = os.path.dirname(__file__)
 
 
 ALLOWED_HOSTS = "localhost"
-DEBUG = "False"
+DEBUG = False
 STATICFILES_DIRS = (
     os.path.join(pyconzadir, 'static'),
     os.path.join(pyconzadir, 'bower_components'),

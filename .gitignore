@@ -1,3 +1,5 @@
-/bower_components
-/node_modules
+localsettings.py
+bower_components/
+localsettings.pyc
+node_modules/
 *.pyc
